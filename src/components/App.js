@@ -74,9 +74,9 @@ export default class App extends Component {
             <div className={styles.App}>
                 <PhoneBook onAddContact={this.addContact} contacts={this.state.contacts} />
                 {visibleContacts.length > 0 &&
-                    <Contacts contactsArr={visibleContacts} onRemoveContact={this.removeContact}></Contacts>
+                    <Contacts contactsArr={visibleContacts} onRemoveContact={this.removeContact} />
                 }
-                <Filter value={filter} onChangeFilter={this.changeFilter}></Filter>
+                <Filter value={filter} onChangeFilter={this.changeFilter} />
                 {error && <Notification message={`Something went wrong: ${error.message}`} />}
             </div>
         )
